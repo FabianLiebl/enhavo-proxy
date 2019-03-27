@@ -39,6 +39,9 @@ ProjectBundle\Entity\Host:
         redirect:
             type: string
             nullable: true
+        redirectKeepUrl:
+            type: boolean
+            nullable: false
         default:
             column: "`default`"
             type: boolean

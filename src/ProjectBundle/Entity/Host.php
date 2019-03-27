@@ -87,6 +87,11 @@ class Host implements ResourceInterface
     private $redirect;
 
     /**
+     * @var bool
+     */
+    private $redirectKeepUrl = false;
+
+    /**
      * @var boolean
      */
     private $default = false;
@@ -246,6 +251,22 @@ class Host implements ResourceInterface
     public function setRedirect($redirect)
     {
         $this->redirect = $redirect;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isRedirectKeepUrl()
+    {
+        return $this->redirectKeepUrl;
+    }
+
+    /**
+     * @param bool $redirectKeepUrl
+     */
+    public function setRedirectKeepUrl($redirectKeepUrl)
+    {
+        $this->redirectKeepUrl = $redirectKeepUrl;
     }
 
     /**
